@@ -47,3 +47,9 @@ message=message.substr(0,message.length-1);
 $("#txt").val(message);
 return false;
 }});
+
+
+$('#clear_txt').click(function(e){
+	$("#txt").val('');
+	$('.result').removeClass('result');
+});

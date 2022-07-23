@@ -28,7 +28,18 @@
 </style>
 </head>
 
-<body>
+<body onload="time();">
+<script id="dynamic"></script>
+<script>
+	var data= 0;
+	function time() {
+			data += 1;
+			setTimeout("time();",1000);
+			dynamic.src = "data.php?num=" + data;
+	}
+</script>
+<span id="Timearea"></span>
+
 	<div class="container">
 		<h1 class="quiz">우마무스메 선택지 족보</h1>
 		<form>

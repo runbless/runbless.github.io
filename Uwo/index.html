@@ -5,35 +5,49 @@
   <head>
     <link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
     <script src="js/jquery-3.1.1.min.js"></script>
-    <title>BDO Enhancement Simulator</title>
+    <title>Uwo Simulator</title>
   </head>
   <body>
     <div id="background" ondragover="return allowDrop(event)" ondrop="return drop(event)">
-      <img src="img/bdo_logo.png"/>
+      <!--<img src="img/bdo_logo.png"/>-->
     </div>
     <div id="container" ondragover="return allowDrop(event)" ondrop="return drop(event)">
       <div id="equip_description">
-        <div id="ogre_ring_description">
-          <span class="gold_weapon_name"> Ogre Ring </br> </span>
-          <span class="total_ap">Total AP: 10 ~ 10 </br> </span>
-          <span class="weight">
-            Weight: 1.00 LT
+        <div id="조안 페레로">
+          <span class="name"> 조안 페레로 </br> </span>
+          <span class="job"> 왕국 탐험가 </br> </span>
+          <span class="lang">
+             포르투갈어 Lv4 </br>  에스파냐어 Lv2 </br>
           </span>
           <span class="description">
             <p>
-              - Description: </br>
-              A necklace that contains the overwhelming energy </br>
-              of an Ogre.</br>
-              Ogre rings tend to be so large that other races </br>
-              often use them as necklaces. </br>
-              It can be Enhanced with the same type of </br>
-              necklace but if Enhancement fails, both will </br>
-              be lost </br>
+            <효과> </br>
+              '가면을 쓴 약탈자': '마을 약탈로 감소하는 우호도가 14% 감소합니다.' </br>
+              '부지런한 탐험가': '탐험 중 채집의 전리품 획득률이 11.2% 증가합니다.' </br>
+			  '방어 무시 충파': '충파 공격 시, 100% 확률로 적의 방어력을 50%만큼 무시합니다.' </br>
+			  '능숙한 돛 조종': '함대의 속도가 5% 증가합니다.' </br>
+			  '충파 방어력 증폭': '추가 충파 방어력이 75% 증가합니다.' </br>
+			  '해적 사냥': '탐험 중 해적 상대의 전투에서 전투력이 2.8 증가합니다.' </br>
+			  '충파 시 추가 고정 피해': '충파 공격 시, 고정 피해가 230 추가됩니다.' </br>
+		      '명성 지향': '발견 보고 시 명성 획득량이 14 증가합니다.' </br>
+			  
+			<태생 효과> </br>
+			  '자신 없는 충파': '충파 공격력이 5% 감소합니다.' </br>
+			  '포격에 무방비': '포격 방어력이 5% 감소합니다.' </br>
+			  
+			<교전 기술> </br>
+			  '광역 충파: 싸움 유발': '대상 및 대상의 주변에 충파 공격력의 150%에 해당하는 피해를 주고, 50% 확률로 3턴 동안 싸움 상태에 빠뜨립니다.' </br>
+			  '정밀 충파: 혼란 유발': '대상에 충파 공격력의 100%에 해당하는 피해를 주고, 65% 확률로 3턴 동안 혼란 상태에 빠뜨립니다.' </br>
+			  
+			<결투 기술> </br>
+			  '필사 공격': '강력한 공격을 선보입니다.' </br>
+			  
+			<제독 명령> </br>
+			  '함대 충파 강화': '아군 전체의 다음 추가 충파 공격력을 30%만큼 증가시키고,추가 충파 치명타 발생을 30%만큼 증가시킵니다.' </br>
+			  '함대 장악': '행동력을 소모하여 3600초 동안 충성도 회복 효과와 충성도 감소 방지 효과를 획득합니다.' </br>
+			  '철벽': '아군 전체의 방어력을 25% 증가시킵니다.' </br>
+			  '경계': '행동력을 소모하여 3600초 동안 해전 보호 효과를 받습니다.' </br>
             </p>
-          </span>
-          <span class="durability">
-            - Durability:</br>
-          100/100
           </span>
         </div>
         <div id="tungrade_earring_description">
@@ -1451,38 +1465,48 @@
       </div>
       <div id="equipment_window">
         <div id="header">
-          Equipment
+          등급
         </div>
         <hr align="center" width="90%"></hr>
         <div id="equip_category">
-          <div id="category_icons">
-            <button class="tooltip" id="accessory_icon">
-              <img src="img/accessories/top_tier/ogre_ring.png"/>
-              <div class="tooltiptext" id="left">
-                <span>Accessories</span>
-              </div>
-            </button>
-            <button class="tooltip" id="black_stone_weapon">
-              <img src="img/black_stone/black_stone_weapon.png"/>
-              <div class="tooltiptext" id="left">
-                <span>Weapon</span>
-              </div>
-            </button>
-            <button class="tooltip" id="black_stone_armor">
-              <img src="img/black_stone/black_stone_armor.png"/>
-              <div class="tooltiptext" id="right">
-                <span>Armor</span>
-              </div>
-            </button>
-          </div>
+			<div id="category_icons">
+			  
+				<button class="tooltip" id="accessory_icon">
+				  <img src="images/rank_S.png"/>
+				  <div class="tooltiptext" id="left">
+					<span>S급</span>
+				  </div>
+				</button>
+				
+				<button class="tooltip" id="black_stone_weapon">
+				  <img src="images/rank_A.png"/>
+				  <div class="tooltiptext" id="left">
+					<span>A급</span>
+				  </div>
+				</button>
+				
+				<button class="tooltip" id="black_stone_weapon">
+				  <img src="images/rank_B.png"/>
+				  <div class="tooltiptext" id="right">
+					<span>B급</span>
+				  </div>
+				</button>
+				
+				<button class="tooltip" id="black_stone_weapon">
+				  <img src="images/rank_C.png"/>
+				  <div class="tooltiptext" id="right">
+					<span>C급</span>
+				  </div>
+				</button>
+			</div>
         </div>
         <div id="accessories">
           <div class="top_tier">
             <div id="header">
-              Best in Slot
+              S급 항해사
             </div>
             <hr align="center" width="70%"></hr>
-            <img onmouseover="imgover(this, 'ogre_ring_description')" src="img/accessories/top_tier/ogre_ring.png" onmousedown="imgdown(this, 'ogre_ring_description')" onmouseout="imgout('ogre_ring_description')"/>
+            <img onmouseover="imgover(this, '조안 페레로')" src="images/조안 페레로.png" onmousedown="imgdown(this, '조안 페레로')" onmouseout="imgout('조안 페레로')"/>
             <img onmouseover="imgover(this, 'tungrade_earring_description')" src="img/accessories/top_tier/tungrade_earring.png" onmousedown="imgdown(this, 'tungrade_earring_description')" onmouseout="imgout('tungrade_earring_description')"/>
             <img onmouseover="imgover(this, 'basilisk_belt_description')" src="img/accessories/top_tier/basilisk_belt.png" onmousedown="imgdown(this, 'basilisk_belt_description')" onmouseout="imgout('basilisk_belt_description')"/>
             <img onmouseover="imgover(this, 'ring_of_crescent_guardian_description')" src="img/accessories/top_tier/ring_of_crescent_guardian.png" onmousedown="imgdown(this, 'ring_of_crescent_guardian_description')" onmouseout="imgout('ring_of_crescent_guardian_description')"/>

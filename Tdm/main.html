@@ -40,70 +40,65 @@ document.onmouseup = null;
 <html>
 <head>
 
+<style>
+	#back{
+		position: relative;
+		margin-left: 50;
+		}
+</style>
 <script>
-function addImage(){
-	document.body.innerHTML += '<img src="img/보스.png" style="position:absolute; left:0px; top:50px; cursor:pointer; cursor:hand; border:0" onmousedown="startDrag(event, this)">'
+function addImage(index){
+	document.body.innerHTML += '<img src="img/'+index+'.png" style="position:absolute; width:50px; height:50px; left:450px; top:500px; cursor:pointer; cursor:hand; border:0" onmousedown="startDrag(event, this)">'
 }
 function map_mu(){
-	document.getElementById('back').style.backgroundImage = "url(img/무.png)";
+	document.getElementById('back').src = "img/무.png";
+	document.getElementById('back').style = "width:50%; position: absolute; margin-left: 70px;";
 }
 function map_jung(){
-	document.getElementById('back').style.backgroundImage = "url(img/중.png)";
+	document.getElementById('back').src = "img/중.png";
+	document.getElementById('back').style = "width:50%; position: absolute; margin-left: 70px;";
 }
 function map_san(){
-	document.getElementById('back').style.backgroundImage = "url(img/산.png)";
+	document.getElementById('back').src = "img/산.png";
+	document.getElementById('back').style = "width:50%; position: absolute; margin-left: 70px;";
 }
 function map_all() {
-   document.getElementById('back').style.backgroundImage = "url(img/map.webp)";
+   document.getElementById('back').src = "img/map.webp";
+   document.getElementById('back').style = "position: absolute; margin-left: 70px;";
 }
 </script>
 
-<style>
-#back {
-  width: 100%;
-  height: 904px;
-  background-image: url('img/map.webp');
-  background-repeat: no-repeat;
-  background-position: center;
-}
-</style>
 </head>
 <body>
-  <input type='button' 
-         value='전체지도' 
-         onclick='map_all()'/>
-		 
-  <input type='button' 
-         value='무' 
-         onclick='map_mu()'/>
-  <input type='button' 
-         value='중' 
-         onclick='map_jung()'/>
-  <input type='button' 
-         value='산' 
-         onclick='map_san()'/>
-		 
-  <input type='button' 
-         value='보스' 
-         onclick='addImage()'/>
-		 
-  <input type='button' 
-         value='쫄' 
-         onclick='addImage()'/>
-
-  <input type='button' 
-         value='와드' 
-         onclick='addImage()'/>
-		 
-<div id="back">
+<div style="position:absolute;">
+지도 변경<br>
+	<input type='button'          value='전체지도'          onclick='map_all()'/><br>
+	<input type='button'          value='무'          onclick='map_mu()'/><br>	
+	<input type='button'          value='중'          onclick='map_jung()'/><br>
+	<input type='button'          value='산'          onclick='map_san()'/>
 </div>
 
-<img src="img/보스.png" style="position:absolute; left:0px; top:50px; cursor:pointer; cursor:hand; border:0" onmousedown="startDrag(event, this)">
-<img src="img/와드.png" style="position:absolute; left:0px; top:50px; cursor:pointer; cursor:hand; border:0" onmousedown="startDrag(event, this)">
-<img src="img/와드.png" style="position:absolute; left:0px; top:50px; cursor:pointer; cursor:hand; border:0" onmousedown="startDrag(event, this)">
-<img src="img/쫄몹.png" style="position:absolute; left:0px; top:50px; cursor:pointer; cursor:hand; border:0" onmousedown="startDrag(event, this)">
-<img src="img/쫄몹.png" style="position:absolute; left:0px; top:50px; cursor:pointer; cursor:hand; border:0" onmousedown="startDrag(event, this)">
-<img src="img/쫄몹.png" style="position:absolute; left:0px; top:50px; cursor:pointer; cursor:hand; border:0" onmousedown="startDrag(event, this)">
+<div style="position:absolute; margin-top: 120px;">
+징 추가<br>
+	<input type='button'          value='1'          onclick='addImage(1)'/><br>
+	<input type='button'          value='2'          onclick='addImage(2)'/><br>	
+	<input type='button'          value='3'          onclick='addImage(3)'/><br>	
+	<input type='button'          value='4'          onclick='addImage(4)'/><br>	
+	<input type='button'          value='5'          onclick='addImage(5)'/><br>	
+	<input type='button'          value='6'          onclick='addImage(6)'/><br>	
+	<input type='button'          value='7'          onclick='addImage(7)'/><br>	
+	<input type='button'          value='8'          onclick='addImage(8)'/>
+</div>
+
+<div>
+	<img id="back" src="img/map.webp" style="position: absolute; margin-left: 70px;" onmousedown="stopDrag()">
+</div>
+
+<img src="img/보스.png" style="position:absolute; left:450px; top:750px; cursor:pointer; cursor:hand; border:0" onmousedown="startDrag(event, this)">
+<img src="img/와드.png" style="position:absolute; width:40px; height:40px; left:370px; top:580px; cursor:pointer; cursor:hand; border:0" onmousedown="startDrag(event, this)">
+<img src="img/쫄몹.png" style="position:absolute; width:50px; height:50px; left:100px; top:300px; cursor:pointer; cursor:hand; border:0" onmousedown="startDrag(event, this)">
+<img src="img/쫄몹.png" style="position:absolute; width:50px; height:50px; left:900px; top:300px; cursor:pointer; cursor:hand; border:0" onmousedown="startDrag(event, this)">
+<img src="img/쫄몹.png" style="position:absolute; width:50px; height:50px; left:550px; top:750px; cursor:pointer; cursor:hand; border:0" onmousedown="startDrag(event, this)">
 
 </body>
 </html>
